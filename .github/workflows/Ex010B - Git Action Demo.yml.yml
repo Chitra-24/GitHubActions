@@ -23,14 +23,11 @@ jobs:
   package:
     needs: [build-app,build-db]
     runs-on: self-hosted
-<<<<<<< HEAD
-      steps:
-        - run: echo "Hello macos"
-
-jobs:
+    steps:
+      - run: echo "Hello ma"
   build-api:
     runs-on: windows-latest
-      steps:
+    steps:
         - run: echo "Hello World"
 =======
     steps:
