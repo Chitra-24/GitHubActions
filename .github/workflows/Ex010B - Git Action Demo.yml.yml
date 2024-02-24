@@ -28,8 +28,4 @@ jobs:
   build-api:
     runs-on: windows-latest
     steps:
-        - run: echo "Hello World"
-=======
-    steps:
-        - run: echo "Hello macos"
->>>>>>> d7a5f1df760cbed5223e36dd4a45627c0f23b69f
+      - run: echo "Hello World"
