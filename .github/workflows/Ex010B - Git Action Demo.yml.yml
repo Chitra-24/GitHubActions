@@ -1,4 +1,4 @@
-name: ABasic workflow
+name: A Basic workflow
 on:
   push:
     branches: ["main"]
@@ -25,3 +25,9 @@ jobs:
     runs-on: self-hosted
       steps:
         - run: echo "Hello macos"
+
+jobs:
+  build-api:
+    runs-on: windows-latest
+      steps:
+        - run: echo "Hello World"
