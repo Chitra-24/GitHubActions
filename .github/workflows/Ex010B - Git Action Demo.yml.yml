@@ -2,7 +2,7 @@ name: ABasic workflow
 on:
   push:
     branches: ["main"]
-  pull_requests:
+  pull_request:
     branches: ["main"]
   workflow_dispatch:
 
@@ -11,17 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      -uses: actions/checkout@v3
-      run: echo Hello,World!
+      - uses: actions/checkout@v3
+      - run: echo "Hello,World!"
 
   build-db:
-    needs: build
+    needs: [build-app]
     runs-on: windows-latest
-      steps:
+    steps:
         - run: echo "Hello windows"
   
   package:
     needs: [build-app,build-db]
     runs-on: self-hosted
-      steps:
+    steps:
         - run: echo "Hello macos"
